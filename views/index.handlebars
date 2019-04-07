@@ -1,0 +1,69 @@
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">你想對誰說幹話? <i class="fa fa-trash" aria-hidden="true"></i></h5>
+          <hr>
+          <form method="POST" action="/">
+
+            <div class="row">
+              <div class='row'>
+                <div class="custom-control custom-radio col-4">
+                  <label for="customRadio1" class="form-label"><img class="img-fluid"
+                      src='https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg'
+                      alt='developer'></label>
+                  <input type="radio" id="customRadio1" name="person" class="custom-control-input" value="dev"
+                    {{#eq person "dev"}} checked{{/eq}}>
+                  <label class="custom-control-label" for="customRadio1">工程師</label>
+                </div>
+
+                <div class="custom-control custom-radio col-4">
+                  <label for="customRadio2" class="forml-label"><img class="img-fluid"
+                      src='https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg'
+                      alt='designer'></label>
+                  <input type="radio" id="customRadio2" name="person" class="custom-control-input" value="des"
+                    {{#eq person "des"}} checked{{/eq}}>>
+                  <label class="custom-control-label" for="customRadio2">設計師</label>
+                </div>
+
+                <div class="custom-control custom-radio col-4">
+                  <label for="customRadio3" class="form-label"><img class="img-fluid"
+                      src='https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg'
+                      alt='founder'></label>
+
+                  <input type="radio" id="customRadio3" name="person" class="custom-control-input" value="founder"
+                    {{#eq person "founder"}} checked{{/eq}}>>
+                  <label class="custom-control-label" for="customRadio3">創業家</label>
+                </div>
+
+
+
+
+
+              </div>
+
+
+            </div>
+
+
+
+            <div class=' row'>
+              <button class="btn btn-success col-3" type="submit">產生幹話</button>
+              <div class="alert alert-info col-9" role="alert">
+                <code>{{trashwords}}</code>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <small class="card-footer text-muted text-right">
+          Idea is inspired by <a href="https://passwordsgenerator.net/" target="_blank">Politician,Spoiled Boss and
+            Reporter </a>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>

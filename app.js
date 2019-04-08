@@ -6,19 +6,13 @@ const bodyParser = require('body-parser')
 const trashwordGenerate = require('./generate_trashwords.js')
 const helpers = require('handlebars-helpers')();
 
-
-
 //define server related variable
 const app = express()
 const port = 3000
 
 //set  template engine
-
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
-
-
-
 
 
 // setting body-parser
@@ -31,19 +25,10 @@ app.get('/', (req, res) => {
 })
 //取得post的表單資料
 app.post('/', (req, res) => {
-
-
   const person = req.body.person
-  const trashwords = trashwordGenerate(person)
-
-
-
-
-  console.log(person)
+  const trashwords = trashwordGenerate(person)  
   res.render('index', { trashwords, person })
-
 })
-
 
 // starts the express server and listening for connections.
 app.listen(port, () => {

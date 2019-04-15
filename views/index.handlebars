@@ -1,5 +1,4 @@
 <div class="container py-3">
-
   <div class="row">
     <div class="col-10  mx-auto">
       <div class="card">
@@ -9,61 +8,38 @@
           <form method="POST" action="/">
 
             <div class="row">
+              {{#each career}}
               <div class=" col-4">
                 <div class="card">
-                  <label for="customRadio1" class="form-label"><img class="card-img-top"
-                      src='https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg'
-                      alt='developer' style='height:200px'></label>
+                  <label for="customRadio1" class="form-label"><img class="card-img-top" src='{{this.image}}'
+                      alt='{{this.career_type}}' style='height:200px'></label>
                   <div class="card-body custom-control custom-radio text-center p-3">
-                    <input type="radio" id="customRadio1" name="person" class="custom-control-input" value="dev"
-                      {{#eq person "dev"}} checked{{/eq}}>
-                    <label class="custom-control-label" for="customRadio1">工程師</label>
+                    <input type="radio" id="{{this.id}}" name="person" class="custom-control-input"
+                      value="{{this.career_type}}" {{#eq  person  ('{{ this.career_type }}') }} checked{{/eq}}>
+                    <label class="custom-control-label" for="{{this.id}}">{{this.title}}</label>
                   </div>
                 </div>
               </div>
-
-              <div class=" col-4">
-                <div class="card">
-                  <label for="customRadio2" class="forml-label"><img class="card-img-top"
-                      src='https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg'
-                      alt='designer' style='height:200px'></label>
-                  <div class="custom-control custom-radio text-center p-3">
-                    <input type="radio" id="customRadio2" name="person" class="custom-control-input" value="des"
-                      {{#eq person "des"}} checked{{/eq}}>
-                    <label class="custom-control-label" for="customRadio2">設計師</label>
-                  </div>
-                </div>
-              </div>
-
-              <div class=" col-4">
-                <div class="card">
-                  <label for="customRadio3" class="form-label"><img class="card-img-top"
-                      src='https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg'
-                      alt='founder' style='height:200px'></label>
-                  <div class="custom-control custom-radio text-center p-3">
-                    <input type="radio" id="customRadio3" name="person" class="custom-control-input" value="founder"
-                      {{#eq person "founder"}} checked{{/eq}}>
-                    <label class="custom-control-label" for="customRadio3">創業家</label>
-                  </div>
-                </div>
-              </div>
+              {{/each}}
 
             </div>
-            <div class=' row'>
-              <button class="btn btn-success col-3" type="submit">產生幹話</button>
-              <div class="alert alert-info col-9" role="alert">
-                <code>{{trashwords}}</code>
-              </div>
 
-            </div>
-          </form>
         </div>
+        <div class=' row'>
+          <button class="btn btn-success col-3" type="submit">產生幹話</button>
+          <div class="alert alert-info col-9" role="alert">
+            <code>{{trashwords}}</code>
+          </div>
 
-        <small class="card-footer text-muted text-right">
-          Idea is inspired by <a href="https://passwordsgenerator.net/" target="_blank">Politician,Spoiled Boss and
-            Reporter </a>
-        </small>
+        </div>
+        </form>
       </div>
+
+      <small class="card-footer text-muted text-right">
+        Idea is inspired by <a href="https://passwordsgenerator.net/" target="_blank">Politician,Spoiled Boss and
+          Reporter </a>
+      </small>
     </div>
   </div>
+</div>
 </div>

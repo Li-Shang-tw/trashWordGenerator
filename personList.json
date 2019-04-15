@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "career_type": "dev",
+      "title": "Engineer",
+      "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+    },
+    {
+      "id": 2,
+      "career_type": "des",
+      "title": "Designer",
+      "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+    },
+    {
+      "id": 3,
+      "career_type": "founder",
+      "title": "Entrepreneur",
+      "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+    }
+  ]
+}
